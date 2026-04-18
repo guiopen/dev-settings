@@ -1,0 +1,164 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "base_keymap": "VSCode",
+  "file_scan_inclusions": ["node_modules/"],
+  //"soft_wrap": "editor_width",
+  "sticky_scroll": { "enabled": true },
+  "format_on_save": "off",
+  "use_on_type_format": false,
+  "ensure_final_newline_on_save": false,
+  "remove_trailing_whitespace_on_save": false,
+  "autosave": { "after_delay": { "milliseconds": 1000 } },
+  "tabs": { "git_status": true, "file_icons": true },
+  "project_panel": { "hide_root": true },
+  "resize_all_panels_in_dock": [], // [] means every panel has its own size
+
+  "lsp": {
+    "gopls": {
+      "settings": {
+        "usePlaceholders": false,
+      },
+    },
+  },
+
+  "theme": {
+    "mode": "dark",
+    "dark": "Zedokai (Filter Spectrum)",
+    "light": "Zedokai Light (Filter Sun)",
+  },
+  "icon_theme": "Material Icon Theme",
+  "ui_font_family": "Inter",
+  "buffer_font_family": "JetBrains Mono",
+  "ui_font_size": 15.0,
+  "buffer_font_size": 16.0,
+  "agent_ui_font_size": 16.0,
+  "agent_buffer_font_size": 15.0,
+  "ui_font_weight": 500.0,
+  "buffer_font_weight": 400.0,
+  "buffer_line_height": { "custom": 1.5 },
+
+  "auto_install_extensions": {
+    "material-icon-theme": true,
+    "zedokai": true,
+    "sql": true,
+    "html": true,
+    "java": true,
+    "svelte": true,
+    "git-firefly": true,
+  },
+
+  "disable_ai": false,
+  "show_edit_predictions": false,
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+
+  "language_models": {
+    "openai_compatible": {
+      "llama.cpp": {
+        "api_url": "http://127.0.0.1:8080/v1",
+        "available_models": [
+          {
+            "name": "Local Model",
+            "max_tokens": 64000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+            },
+          },
+        ],
+      },
+    },
+  },
+
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+    },
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+    },
+    "commit_message_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+    },
+    "thread_summary_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+    },
+    "favorite_models": [
+      {
+        "provider": "llama.cpp",
+        "model": "Local Model",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5-mini",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-4.6",
+      },
+    ],
+    "profiles": {
+      "write": {
+        "name": "Write",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": false,
+          "list_directory": true,
+          "project_notifications": false,
+          "move_path": true,
+          "now": false,
+          "find_path": true,
+          "read_file": true,
+          "restore_file_from_disk": false,
+          "save_file": true,
+          "open": false,
+          "grep": true,
+          "spawn_agent": false,
+          "terminal": true,
+          "thinking": true,
+          "web_search": true,
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {},
+      },
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "diagnostics": true,
+          "fetch": false,
+          "list_directory": true,
+          "project_notifications": false,
+          "now": false,
+          "find_path": true,
+          "read_file": true,
+          "open": false,
+          "grep": true,
+          "spawn_agent": false,
+          "thinking": true,
+          "web_search": true,
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {},
+      },
+    },
+  },
+}
