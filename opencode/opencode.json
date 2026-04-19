@@ -37,6 +37,16 @@
       }
     }
   },
+  "mcp": {
+    "duckduckgo": {
+      "type": "local",
+      "command": ["uvx", "duckduckgo-mcp-server"],
+      "environment": {
+        "DDG_SAFE_SEARCH": "OFF",
+        "DDG_REGION": "wt-wt"
+      }
+    }
+  },
   "provider": {
     "llama.cpp": {
       "npm": "@ai-sdk/openai-compatible",
@@ -52,16 +62,6 @@
             "output": 32000
           }
         }
-      }
-    }
-  },
-  "mcp": {
-    "duckduckgo": {
-      "type": "local",
-      "command": ["uvx", "duckduckgo-mcp-server"],
-      "environment": {
-        "DDG_SAFE_SEARCH": "OFF",
-        "DDG_REGION": "wt-wt"
       }
     }
   }
