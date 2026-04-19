@@ -10,6 +10,8 @@
     "read": "allow",
     "grep": "allow",
     "glob": "allow",
+    "question": "allow",
+    "todowrite": "allow",
     "doom_loop": "deny",
     "websearch": "deny",
     "codesearch": "deny",
