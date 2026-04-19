@@ -10,7 +10,10 @@
     "read": "allow",
     "grep": "allow",
     "glob": "allow",
-    "webfetch": "allow",
+    "doom_loop": "deny",
+    "websearch": "deny",
+    "codesearch": "deny",
+    "webfetch": "deny", // better to use duckduckgo mcp instead
     "bash": {
       "ls *": "allow",
       "cat *": "allow",
@@ -23,9 +26,42 @@
     }
   },
   "agent": {
+    "plan": {
+      "permission": {
+        "edit": "deny"
+      }
+    },
     "build": {
       "permission": {
         "edit": "allow"
+      }
+    }
+  },
+  "provider": {
+    "llama.cpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama-server",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080/v1"
+      },
+      "models": {
+        "local-model": {
+          "name": "Local Model",
+          "limit": {
+            "context": 128000,
+            "output": 32000
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "duckduckgo": {
+      "type": "local",
+      "command": ["uvx", "duckduckgo-mcp-server"],
+      "environment": {
+        "DDG_SAFE_SEARCH": "OFF",
+        "DDG_REGION": "wt-wt"
       }
     }
   }
