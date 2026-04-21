@@ -30,7 +30,8 @@
       "diff *": "allow",
       "git diff *": "allow",
       "git status *": "allow",
-      "git log *": "allow"
+      "git log *": "allow",
+      "python -m py_compile *": "allow"
     }
   },
   "agent": {
