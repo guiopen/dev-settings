@@ -10,16 +10,23 @@
     "read": "allow",
     "grep": "allow",
     "glob": "allow",
-    "question": "allow",
-    "todowrite": "allow",
+    "task": "deny",
+    "skill": "deny",
+    "question": "deny",
+    "todowrite": "deny",
     "doom_loop": "deny",
     "websearch": "deny",
     "codesearch": "deny",
     "webfetch": "deny", // better to use duckduckgo mcp instead
     "duckduckgo*": "allow",
     "bash": {
+      // navigation
       "ls *": "allow",
       "find *": "allow",
+      "tree *": "allow",
+      "du *": "allow",
+      "pwd": "allow",
+      // reading
       "cat *": "allow",
       "echo *": "allow",
       "head *": "allow",
@@ -27,10 +34,34 @@
       "wc *": "allow",
       "file *": "allow",
       "stat *": "allow",
+      // search
+      "grep *": "allow",
+      "rg *": "allow",
+      // text transformation
+      "sort *": "allow",
+      "uniq *": "allow",
+      "cut *": "allow",
+      "awk *": "allow",
+      "jq *": "allow",
+      // comparison
       "diff *": "allow",
+      // system/environment
+      "which *": "allow",
+      "type *": "allow",
+      "env": "allow",
+      "printenv *": "allow",
+      // git
       "git diff *": "allow",
       "git status *": "allow",
       "git log *": "allow",
+      "git show *": "allow",
+      "git blame *": "allow",
+      "git branch *": "allow",
+      "git stash list": "allow",
+      // programming languages
+      "node --version": "allow",
+      "python --version": "allow",
+      "python3 --version": "allow",
       "python -m py_compile *": "allow",
       "python3 -m py_compile *": "allow"
     }
@@ -45,6 +76,12 @@
       "permission": {
         "edit": "allow"
       }
+    },
+    "general": {
+      "disable": true
+    },
+    "explore": {
+      "disable": true
     }
   },
   "mcp": {
