@@ -20,6 +20,11 @@
   "resize_all_panels_in_dock": [], // [] means every panel has its own size
   "project_panel": { "dock": "left", "hide_root": true },
   "git_panel": { "dock": "left" },
+  "search": { "button": false },
+  "debugger": { "button": false },
+  "outline_panel": { "button": false },
+  "collaboration_panel": { "button": false },
+  "gutter": { "breakpoints": false },
 
   "lsp": {
     "gopls": {
