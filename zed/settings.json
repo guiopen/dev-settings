@@ -24,6 +24,7 @@
   "collaboration_panel": { "button": false },
   "search": { "button": false },
   "debugger": { "button": false },
+  "toolbar": { "quick_actions": false },
   "tab_bar": { "show_tab_bar_buttons": false },
   "gutter": { "breakpoints": false },
 
