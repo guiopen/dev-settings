@@ -68,3 +68,5 @@ Then list findings grouped by file. For each finding:
     → Suggested fix (if applicable — skip if the fix is obvious)
 
 End with a one-line overall assessment: how confident are you this change is safe to merge as-is?
+
+---
