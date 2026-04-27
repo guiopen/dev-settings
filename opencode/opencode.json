@@ -17,10 +17,10 @@
     "question": "deny",
     "todowrite": "deny",
     "doom_loop": "deny",
-    "websearch": "deny",
     "codesearch": "deny",
-    "webfetch": "deny", // better to use duckduckgo mcp instead
-    "duckduckgo*": "allow",
+    "websearch": "deny",
+    "webfetch": "deny",
+    "duckduckgo*": "deny",
     "bash": {
       // navigation
       "ls *": "allow",
