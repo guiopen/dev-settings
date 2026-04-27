@@ -1,3 +1,5 @@
 background = #222222
-mouse-scroll-multiplier = 1
+window-titlebar-background = #323232
+window-theme = ghostty
 window-save-state = always
+mouse-scroll-multiplier = 1
