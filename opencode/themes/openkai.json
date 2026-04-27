@@ -47,26 +47,26 @@
     },
     "text": {
       "dark": "foreground",
-      "light": "#272822"
+      "light": "background"
     },
     "textMuted": {
       "dark": "comment",
-      "light": "#75715e"
+      "light": "comment"
     },
     "background": {
-      "dark": "#272822",
+      "dark": "background",
       "light": "#fafafa"
     },
     "backgroundPanel": {
-      "dark": "#1e1f1c",
+      "dark": "backgroundAlt",
       "light": "#f0f0f0"
     },
     "backgroundElement": {
-      "dark": "#3e3d32",
+      "dark": "backgroundPanel",
       "light": "#e0e0e0"
     },
     "border": {
-      "dark": "#3e3d32",
+      "dark": "backgroundPanel",
       "light": "#d0d0d0"
     },
     "borderActive": {
@@ -74,7 +74,7 @@
       "light": "blue"
     },
     "borderSubtle": {
-      "dark": "#1e1f1c",
+      "dark": "backgroundAlt",
       "light": "#e8e8e8"
     },
     "diffAdded": {
@@ -87,11 +87,11 @@
     },
     "diffContext": {
       "dark": "comment",
-      "light": "#75715e"
+      "light": "comment"
     },
     "diffHunkHeader": {
       "dark": "comment",
-      "light": "#75715e"
+      "light": "comment"
     },
     "diffHighlightAdded": {
       "dark": "green",
@@ -110,7 +110,7 @@
       "light": "#ffe0e0"
     },
     "diffContextBg": {
-      "dark": "#1e1f1c",
+      "dark": "backgroundAlt",
       "light": "#f0f0f0"
     },
     "diffLineNumber": {
@@ -127,7 +127,7 @@
     },
     "markdownText": {
       "dark": "foreground",
-      "light": "#272822"
+      "light": "background"
     },
     "markdownHeading": {
       "dark": "pink",
@@ -147,7 +147,7 @@
     },
     "markdownBlockQuote": {
       "dark": "comment",
-      "light": "#75715e"
+      "light": "comment"
     },
     "markdownEmph": {
       "dark": "yellow",
@@ -159,7 +159,7 @@
     },
     "markdownHorizontalRule": {
       "dark": "comment",
-      "light": "#75715e"
+      "light": "comment"
     },
     "markdownListItem": {
       "dark": "cyan",
@@ -179,11 +179,11 @@
     },
     "markdownCodeBlock": {
       "dark": "foreground",
-      "light": "#272822"
+      "light": "background"
     },
     "syntaxComment": {
       "dark": "comment",
-      "light": "#75715e"
+      "light": "comment"
     },
     "syntaxKeyword": {
       "dark": "pink",
@@ -195,7 +195,7 @@
     },
     "syntaxVariable": {
       "dark": "foreground",
-      "light": "#272822"
+      "light": "background"
     },
     "syntaxString": {
       "dark": "yellow",
@@ -215,7 +215,7 @@
     },
     "syntaxPunctuation": {
       "dark": "foreground",
-      "light": "#272822"
+      "light": "background"
     }
   }
 }
