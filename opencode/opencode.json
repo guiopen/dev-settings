@@ -70,11 +70,13 @@
   },
   "agent": {
     "plan": {
+      "color": "accent",
       "permission": {
         "edit": "deny"
       }
     },
     "build": {
+      "color": "warning",
       "permission": {
         "edit": "allow"
       }
