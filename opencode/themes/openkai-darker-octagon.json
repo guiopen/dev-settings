@@ -19,58 +19,227 @@
     "borderFocus": "#696d77",
     "borderSubtle": "#161821",
     "diffAddedBg": "#2d382f",
-    "diffRemovedBg": "#3d2a2f"
+    "diffRemovedBg": "#3d2a2f",
+    "lightBackground": "#f8efe7",
+    "lightBackgroundAlt": "#ece5df",
+    "lightBackgroundPanel": "#ded5d0",
+    "lightForeground": "#2c232e",
+    "lightComment": "#a59c9c",
+    "lightMuted": "#92898a",
+    "lightDim": "#beb5b3",
+    "lightGray": "#72696d",
+    "lightRed": "#ce4770",
+    "lightOrange": "#d4572b",
+    "lightYellow": "#b16803",
+    "lightGreen": "#218871",
+    "lightCyan": "#2473b6",
+    "lightPurple": "#6851a2",
+    "lightBorder": "#ccc5bf",
+    "lightBorderFocus": "#a59c9c",
+    "lightBorderSubtle": "#ded5d0",
+    "lightDiffAddedBg": "#cdd6cc",
+    "lightDiffRemovedBg": "#f1d4d4"
   },
   "theme": {
-    "primary": "gray",
-    "secondary": "muted",
-    "accent": "yellow",
-    "error": "red",
-    "warning": "orange",
-    "success": "green",
-    "info": "yellow",
-    "text": "foreground",
-    "textMuted": "muted",
-    "background": "background",
-    "backgroundPanel": "backgroundAlt",
-    "backgroundElement": "backgroundPanel",
-    "border": "border",
-    "borderActive": "borderFocus",
-    "borderSubtle": "borderSubtle",
-    "diffAdded": "green",
-    "diffRemoved": "red",
-    "diffContext": "comment",
-    "diffHunkHeader": "comment",
-    "diffHighlightAdded": "green",
-    "diffHighlightRemoved": "red",
-    "diffAddedBg": "diffAddedBg",
-    "diffRemovedBg": "diffRemovedBg",
-    "diffContextBg": "backgroundAlt",
-    "diffLineNumber": "dim",
-    "diffAddedLineNumberBg": "diffAddedBg",
-    "diffRemovedLineNumberBg": "diffRemovedBg",
-    "markdownText": "foreground",
-    "markdownHeading": "yellow",
-    "markdownLink": "green",
-    "markdownLinkText": "red",
-    "markdownCode": "green",
-    "markdownBlockQuote": "muted",
-    "markdownEmph": "yellow",
-    "markdownStrong": "orange",
-    "markdownHorizontalRule": "comment",
-    "markdownListItem": "muted",
-    "markdownListEnumeration": "purple",
-    "markdownImage": "green",
-    "markdownImageText": "purple",
-    "markdownCodeBlock": "foreground",
-    "syntaxComment": "comment",
-    "syntaxKeyword": "red",
-    "syntaxFunction": "green",
-    "syntaxVariable": "foreground",
-    "syntaxString": "yellow",
-    "syntaxNumber": "purple",
-    "syntaxType": "cyan",
-    "syntaxOperator": "red",
-    "syntaxPunctuation": "muted"
+    "primary": {
+      "dark": "gray",
+      "light": "lightGray"
+    },
+    "secondary": {
+      "dark": "muted",
+      "light": "lightMuted"
+    },
+    "accent": {
+      "dark": "yellow",
+      "light": "lightYellow"
+    },
+    "error": {
+      "dark": "red",
+      "light": "lightRed"
+    },
+    "warning": {
+      "dark": "orange",
+      "light": "lightOrange"
+    },
+    "success": {
+      "dark": "green",
+      "light": "lightGreen"
+    },
+    "info": {
+      "dark": "yellow",
+      "light": "lightYellow"
+    },
+    "text": {
+      "dark": "foreground",
+      "light": "lightForeground"
+    },
+    "textMuted": {
+      "dark": "muted",
+      "light": "lightMuted"
+    },
+    "background": {
+      "dark": "background",
+      "light": "lightBackground"
+    },
+    "backgroundPanel": {
+      "dark": "backgroundAlt",
+      "light": "lightBackgroundAlt"
+    },
+    "backgroundElement": {
+      "dark": "backgroundPanel",
+      "light": "lightBackgroundPanel"
+    },
+    "border": {
+      "dark": "border",
+      "light": "lightBorder"
+    },
+    "borderActive": {
+      "dark": "borderFocus",
+      "light": "lightBorderFocus"
+    },
+    "borderSubtle": {
+      "dark": "borderSubtle",
+      "light": "lightBorderSubtle"
+    },
+    "diffAdded": {
+      "dark": "green",
+      "light": "lightGreen"
+    },
+    "diffRemoved": {
+      "dark": "red",
+      "light": "lightRed"
+    },
+    "diffContext": {
+      "dark": "comment",
+      "light": "lightComment"
+    },
+    "diffHunkHeader": {
+      "dark": "comment",
+      "light": "lightComment"
+    },
+    "diffHighlightAdded": {
+      "dark": "green",
+      "light": "lightGreen"
+    },
+    "diffHighlightRemoved": {
+      "dark": "red",
+      "light": "lightRed"
+    },
+    "diffAddedBg": {
+      "dark": "diffAddedBg",
+      "light": "lightDiffAddedBg"
+    },
+    "diffRemovedBg": {
+      "dark": "diffRemovedBg",
+      "light": "lightDiffRemovedBg"
+    },
+    "diffContextBg": {
+      "dark": "backgroundAlt",
+      "light": "lightBackgroundAlt"
+    },
+    "diffLineNumber": {
+      "dark": "dim",
+      "light": "lightDim"
+    },
+    "diffAddedLineNumberBg": {
+      "dark": "diffAddedBg",
+      "light": "lightDiffAddedBg"
+    },
+    "diffRemovedLineNumberBg": {
+      "dark": "diffRemovedBg",
+      "light": "lightDiffRemovedBg"
+    },
+    "markdownText": {
+      "dark": "foreground",
+      "light": "lightForeground"
+    },
+    "markdownHeading": {
+      "dark": "yellow",
+      "light": "lightYellow"
+    },
+    "markdownLink": {
+      "dark": "green",
+      "light": "lightGreen"
+    },
+    "markdownLinkText": {
+      "dark": "red",
+      "light": "lightRed"
+    },
+    "markdownCode": {
+      "dark": "green",
+      "light": "lightGreen"
+    },
+    "markdownBlockQuote": {
+      "dark": "muted",
+      "light": "lightMuted"
+    },
+    "markdownEmph": {
+      "dark": "yellow",
+      "light": "lightYellow"
+    },
+    "markdownStrong": {
+      "dark": "orange",
+      "light": "lightOrange"
+    },
+    "markdownHorizontalRule": {
+      "dark": "comment",
+      "light": "lightComment"
+    },
+    "markdownListItem": {
+      "dark": "muted",
+      "light": "lightMuted"
+    },
+    "markdownListEnumeration": {
+      "dark": "purple",
+      "light": "lightPurple"
+    },
+    "markdownImage": {
+      "dark": "green",
+      "light": "lightGreen"
+    },
+    "markdownImageText": {
+      "dark": "purple",
+      "light": "lightPurple"
+    },
+    "markdownCodeBlock": {
+      "dark": "foreground",
+      "light": "lightForeground"
+    },
+    "syntaxComment": {
+      "dark": "comment",
+      "light": "lightComment"
+    },
+    "syntaxKeyword": {
+      "dark": "red",
+      "light": "lightRed"
+    },
+    "syntaxFunction": {
+      "dark": "green",
+      "light": "lightGreen"
+    },
+    "syntaxVariable": {
+      "dark": "foreground",
+      "light": "lightForeground"
+    },
+    "syntaxString": {
+      "dark": "yellow",
+      "light": "lightYellow"
+    },
+    "syntaxNumber": {
+      "dark": "purple",
+      "light": "lightPurple"
+    },
+    "syntaxType": {
+      "dark": "cyan",
+      "light": "lightCyan"
+    },
+    "syntaxOperator": {
+      "dark": "red",
+      "light": "lightRed"
+    },
+    "syntaxPunctuation": {
+      "dark": "muted",
+      "light": "lightMuted"
+    }
   }
 }
