@@ -5,7 +5,7 @@
   "small_model": "opencode-go/deepseek-v4-flash",
   "compaction": {
     "auto": false,
-    "prune": false
+    "prune": true
   },
   "permission": {
     "*": "ask",
