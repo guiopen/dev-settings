@@ -3,7 +3,6 @@
   "default_agent": "plan",
   "model": "opencode-go/deepseek-v4-flash",
   "small_model": "opencode-go/deepseek-v4-flash",
-  "compaction": { "auto": false },
   "plugin": ["@mohak34/opencode-notifier@latest"],
   "permission": {
     "*": "ask",
