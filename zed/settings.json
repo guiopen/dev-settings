@@ -16,17 +16,23 @@
   "ensure_final_newline_on_save": false,
   "remove_trailing_whitespace_on_save": false,
   "autosave": { "after_delay": { "milliseconds": 1000 } },
-  "tabs": { "git_status": true, "file_icons": true },
+  "tabs": { "file_icons": true },
   "resize_all_panels_in_dock": [], // [] means every panel has its own size
-  "project_panel": { "dock": "left", "hide_root": true },
+  "project_panel": { "git_status": false, "dock": "left", "hide_root": true },
   "git_panel": { "dock": "left" },
   "outline_panel": { "button": false },
   "collaboration_panel": { "button": false },
-  "search": { "button": false },
+  "search": { "center_on_match": true, "button": false },
+  "search_wrap": false,
   "debugger": { "button": false },
+  "gutter": { "bookmarks": false, "breakpoints": false },
+  "scrollbar": { "search_results": false },
   "toolbar": { "quick_actions": false },
-  "tab_bar": { "show_tab_bar_buttons": false },
-  "gutter": { "breakpoints": false },
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_pinned_tabs_in_separate_row": true,
+    "show_nav_history_buttons": false,
+  },
 
   "lsp": {
     "gopls": {
