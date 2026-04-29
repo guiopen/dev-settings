@@ -18,6 +18,7 @@
     "websearch": "deny",
     "webfetch": "deny",
     "duckduckgo*": "deny",
+    "sleep": "deny",
     "bash": {
       // navigation
       "ls *": "allow",
