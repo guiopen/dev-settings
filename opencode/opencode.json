@@ -38,8 +38,6 @@
       "file *": "allow",
       "stat *": "allow",
       "which *": "allow",
-      "shasum *": "allow",
-      "sha256sum *": "allow",
       "diff *": "allow",
       "git diff *": "allow",
       "git status *": "allow",
