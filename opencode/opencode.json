@@ -20,50 +20,31 @@
     "duckduckgo*": "deny",
     "sleep": "deny",
     "bash": {
-      // navigation
-      "ls *": "allow",
-      "find *": "allow",
+      // Replaced by tools
+      "ls *": "deny",
+      "find *": "deny",
+      "cat *": "deny",
+      "echo *": "deny",
+      "head *": "deny",
+      "tail *": "deny",
+      "sed *": "deny",
+      "tee *": "deny",
+      "touch *": "deny",
+      "grep *": "deny",
+      "rg *": "deny",
+      "wc *": "deny",
+      // Other commands with no tool equivalent
       "tree *": "allow",
-      "du *": "allow",
-      "pwd": "allow",
-      // reading
-      "cat *": "allow",
-      "echo *": "allow",
-      "head *": "allow",
-      "tail *": "allow",
-      "wc *": "allow",
       "file *": "allow",
       "stat *": "allow",
-      // search
-      "grep *": "allow",
-      "rg *": "allow",
-      // text transformation
-      "sort *": "allow",
-      "uniq *": "allow",
-      "cut *": "allow",
-      "awk *": "allow",
-      "jq *": "allow",
-      // comparison
-      "diff *": "allow",
-      // system/environment
       "which *": "allow",
-      "type *": "allow",
-      "env": "allow",
-      "printenv *": "allow",
-      // git
+      "shasum *": "allow",
+      "sha256sum *": "allow",
+      "diff *": "allow",
       "git diff *": "allow",
       "git status *": "allow",
       "git log *": "allow",
-      "git show *": "allow",
-      "git blame *": "allow",
-      "git branch *": "allow",
-      "git stash list": "allow",
-      // programming languages
-      "node --version": "allow",
-      "python --version": "allow",
-      "python3 --version": "allow",
-      "python -m py_compile *": "allow",
-      "python3 -m py_compile *": "allow"
+      "git show *": "allow"
     }
   },
   "agent": {
