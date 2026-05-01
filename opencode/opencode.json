@@ -6,7 +6,10 @@
   "plugin": ["@mohak34/opencode-notifier@latest"],
   "permission": {
     "*": "ask",
-    "read": "allow",
+    "read": {
+      "*": "allow",
+      ".env": "deny"
+    },
     "grep": "allow",
     "glob": "allow",
     "task": "allow",

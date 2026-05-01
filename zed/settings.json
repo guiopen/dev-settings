@@ -18,7 +18,7 @@
   "autosave": { "after_delay": { "milliseconds": 1000 } },
   "tabs": { "file_icons": true },
   "resize_all_panels_in_dock": [], // [] means every panel has its own size
-  "project_panel": { "git_status": false, "dock": "left", "hide_root": true },
+  "project_panel": { "dock": "left", "hide_root": true },
   "git_panel": { "dock": "left" },
   "outline_panel": { "button": false },
   "collaboration_panel": { "button": false },
