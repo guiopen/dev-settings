@@ -1,5 +1,9 @@
 background = #222222
 window-titlebar-background = #323232
 window-theme = ghostty
+
+shell-integration = true 
+tab-inherit-working-directory = true 
 window-save-state = always
+
 mouse-scroll-multiplier = 1
