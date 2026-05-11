@@ -7,7 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "disable_ai": true,
+  "disable_ai": false,
+  "show_edit_predictions": false,
   "base_keymap": "VSCode",
   "file_scan_inclusions": ["node_modules/"],
   "format_on_save": "off",
@@ -18,8 +19,7 @@
   "autosave": { "after_delay": { "milliseconds": 1000 } },
   "tabs": { "file_icons": true },
   "resize_all_panels_in_dock": [], // [] means every panel has its own size
-  "project_panel": { "dock": "left", "hide_root": true },
-  "git_panel": { "dock": "left" },
+  "project_panel": { "hide_root": true },
   "outline_panel": { "button": false },
   "collaboration_panel": { "button": false },
   "search": { "center_on_match": true, "button": false },
@@ -52,6 +52,8 @@
   "buffer_font_family": "JetBrains Mono",
   "ui_font_size": 18.0,
   "buffer_font_size": 19.0,
+  "agent_ui_font_size": 18.0,
+  "agent_buffer_font_size": 19.0,
   "ui_font_weight": 500.0,
   "buffer_font_weight": 400.0,
   "buffer_line_height": { "custom": 1.5 },
@@ -59,5 +61,90 @@
   "auto_install_extensions": {
     "material-icon-theme": true,
     "zedokai": true,
+  },
+
+  "context_servers": {
+    "duckduckgo": {
+      "enabled": true,
+      "remote": false,
+      "command": "uvx",
+      "args": ["duckduckgo-mcp-server"],
+      "env": {
+        "DDG_SAFE_SEARCH": "OFF",
+        "DDG_REGION": "wt-wt",
+      },
+    },
+  },
+
+  "language_models": {
+    "opencode": {
+      "show_free_models": false,
+      "show_zen_models": false,
+    },
+  },
+
+  "agent": {
+    "flexible": false,
+    "model_parameters": [{ "temperature": 0.7 }],
+    "default_profile": "ask",
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "enable_all_context_servers": true,
+        "context_servers": {
+          "duckduckgo": {
+            "tools": {
+              "fetch_content": false,
+            },
+          },
+        },
+      },
+      "write": {
+        "name": "Write",
+        "enable_all_context_servers": true,
+        "context_servers": {
+          "duckduckgo": {
+            "tools": {
+              "fetch_content": false,
+            },
+          },
+        },
+      },
+    },
+    "default_model": {
+      "provider": "opencode",
+      "model": "go/deepseek-v4-pro",
+      "enable_thinking": true,
+      "effort": "max",
+    },
+    "inline_assistant_model": {
+      "provider": "opencode",
+      "model": "go/deepseek-v4-flash",
+      "enable_thinking": false,
+    },
+    "commit_message_model": {
+      "provider": "opencode",
+      "model": "go/deepseek-v4-flash",
+      "enable_thinking": false,
+    },
+    "thread_summary_model": {
+      "provider": "opencode",
+      "model": "go/deepseek-v4-flash",
+      "enable_thinking": false,
+    },
+    "favorite_models": [
+      {
+        "provider": "opencode",
+        "model": "go/deepseek-v4-pro",
+        "enable_thinking": true,
+        "effort": "max",
+      },
+      {
+        "provider": "opencode",
+        "model": "go/deepseek-v4-flash",
+        "enable_thinking": true,
+        "effort": "max",
+      },
+    ],
   },
 }
