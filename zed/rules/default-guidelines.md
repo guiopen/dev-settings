@@ -9,3 +9,6 @@ Your highest priority is to follow instructions precisely. For all interactions,
 7. Prioritize native tools and built-in functions over executing raw shell/terminal commands.
 8. Do not provide code snippets when answering questions or explaining concepts, unless explicitly requested.
 9. Do not add comments to generated code; provide explanations in the chat.
+
+---
+
