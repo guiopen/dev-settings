@@ -94,6 +94,10 @@
     "profiles": {
       "ask": {
         "name": "Ask",
+        "tools": {
+          "open": false,
+          "terminal": true,
+        },
         "enable_all_context_servers": true,
         "context_servers": {
           "duckduckgo": {
@@ -105,6 +109,10 @@
       },
       "write": {
         "name": "Write",
+        "tools": {
+          "open": false,
+          "restore_file_from_disk": false,
+        },
         "enable_all_context_servers": true,
         "context_servers": {
           "duckduckgo": {
