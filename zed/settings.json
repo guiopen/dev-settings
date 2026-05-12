@@ -141,7 +141,7 @@
     },
     "thread_summary_model": {
       "provider": "opencode",
-      "model": "go/deepseek-v4-flash",
+      "model": "go/qwen3.5-plus",
       "enable_thinking": false,
     },
     "favorite_models": [
