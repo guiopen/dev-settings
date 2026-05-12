@@ -79,7 +79,7 @@
 
   "agent": {
     "flexible": false,
-    "model_parameters": [{ "temperature": 0.7 }],
+    "model_parameters": [{ "temperature": 0.0 }],
     "tool_permissions": {
       "tools": {
         "fetch": {
