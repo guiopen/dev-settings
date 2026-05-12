@@ -1,24 +1,18 @@
-You are performing a code review. Your job is to catch real problems, not to question the author's decisions.
+Follow this process and rules when performing a code review:
 
-## Current changes
+## Review process
 
-### Changed and staged/modified files (vs last commit)
-`git diff HEAD --name-only | grep -vE '((package|pnpm|vcpkg)-lock\.|\.lock(file)?$|go\.sum$)' | tr '\n' '\0' | xargs -0 -r git diff HEAD --`
+**Step 1 — Verify current changes.**
+Changed and staged/modified files (vs last commit): `git diff HEAD --name-only | grep -vE '((package|pnpm|vcpkg)-lock\.|\.lock(file)?$|go\.sum$)' | tr '\n' '\0' | xargs -0 -r git diff HEAD --`
 
-### Untracked new files
-`git ls-files --others --exclude-standard | grep -vE '((package|pnpm|vcpkg)-lock\.|\.lock(file)?$|go\.sum$)' | tr '\n' '\0' | xargs -0 -I{} sh -c 'file --mime-encoding -b "{}" | grep -qv binary && printf "\n\n=== NEW FILE: %s ===\n" "{}" && cat "{}"' 2>/dev/null || echo "(none)"`
+Untracked new files: `git ls-files --others --exclude-standard | grep -vE '((package|pnpm|vcpkg)-lock\.|\.lock(file)?$|go\.sum$)' | tr '\n' '\0' | xargs -0 -I{} sh -c 'file --mime-encoding -b "{}" | grep -qv binary && printf "\n\n=== NEW FILE: %s ===\n" "{}" && cat "{}"' 2>/dev/null || echo "(none)"`
 
-### Recent commit history (for context)
-`git log --oneline -20`
+Recent commit history (for context): `git log --oneline -20`
 
----
-
-## Your review process
-
-**Step 1 — Understand before you judge.**
+**Step 2 — Understand before judging.**
 Read the diff and commit history to understand *what* is being done and *why* it was likely done. If you can't tell the intent from the diff alone, look at related files, callers, tests, config files, and any other parts of the codebase that import or depend on the changed files.
 
-**Step 2 — Find things that were missed or broken by these changes.**
+**Step 3 — Find things that were missed or broken by these changes.**
 Only flag issues that are *introduced or caused by this changeset*. Ask yourself: was this problem here before? If yes, and the current changes didn't touch that line or make it worse, skip it entirely.
 
 Specifically look for:
@@ -27,9 +21,9 @@ Specifically look for:
 - Parts of the codebase that previously worked correctly but are now broken, outdated, or inconsistent because of this change (e.g. callers that weren't updated, documentation that's now wrong, tests that no longer reflect reality, types that are now mismatched)
 - Security issues or data integrity risks introduced by the changes
 - Missing things that the change clearly requires but forgot to include (e.g. an index for a new DB query, an env variable referenced but not documented, a new dependency not added to the manifest)
-- Consistency violations *with the rest of the codebase* — if this file uses a different pattern than every other file, flag it only if it creates real inconsistency (naming conventions, error handling style, etc.)
+- Consistency violations *with the rest of the codebase* — if a file uses a different pattern than every other file, flag it only if it creates real inconsistency (naming conventions, error handling style, etc.)
 
-**Step 3 — Classify each finding.**
+**Step 4 — Classify each finding.**
 Use exactly these labels:
 
 - **Bug** — incorrect behavior, will break something
@@ -41,15 +35,12 @@ Do not create a category for "improvement", "suggestion", "refactor", or "consid
 
 ---
 
-## What you must NOT do
+## Restrictions
 
-**Do not question technical decisions.** If the author used REST instead of WebSockets, a loop instead of a functional method, a specific library, a particular architecture — these are intentional choices made with context you don't have. Do not second-guess them.
-
-**Do not flag pre-existing issues.** If a line of code was there before this changeset and wasn't touched, it's out of scope. The only exception: if the new change makes that pre-existing code *actively wrong or misleading* now, flag it under Missing or Inconsistency.
-
-**Do not flag personal style preferences.** Semicolons vs no semicolons, quote style, spacing — only flag these if they violate the *established convention of this specific codebase* AND it's the kind of thing a linter would catch.
-
-**Do not pad the review.** If there's nothing to report in a category, don't invent something. An empty review is a valid review.
+1. Do not question technical decisions. If the author used REST instead of WebSockets, a loop instead of a functional method, a specific library, a particular architecture — these are intentional choices made with context you don't have. Do not second-guess them.
+2. Do not flag pre-existing issues. If a line of code was there before this changeset and wasn't touched, it's out of scope. The only exception: if the new change makes that pre-existing code *actively wrong or misleading* now, flag it under Missing or Inconsistency.
+3. Do not flag personal style preferences. Semicolons vs no semicolons, quote style, spacing — only flag these if they violate the *established convention of this specific codebase* AND it's the kind of thing a linter would catch.
+4. Do not pad the review. If there's nothing to report in a category, don't invent something. An empty review is a valid review.
 
 ---
 
