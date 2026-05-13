@@ -79,6 +79,7 @@
 
   "agent": {
     "flexible": false,
+    "expand_terminal_card": false,
     "model_parameters": [{ "temperature": 0.0 }],
     "tool_permissions": {
       "tools": {
@@ -94,6 +95,12 @@
     "profiles": {
       "ask": {
         "name": "Ask",
+        "default_model": {
+          "provider": "opencode",
+          "model": "go/deepseek-v4-pro",
+          "enable_thinking": true,
+          "effort": "max"
+        },
         "tools": {
           "open": false,
           "terminal": true,
@@ -109,6 +116,12 @@
       },
       "write": {
         "name": "Write",
+        "default_model": {
+          "provider": "opencode",
+          "model": "go/deepseek-v4-flash",
+          "enable_thinking": true,
+          "effort": "max"
+        },
         "tools": {
           "open": false,
           "restore_file_from_disk": false,
