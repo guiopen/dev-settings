@@ -2,7 +2,7 @@
 description: Thorough code review of all current changes
 ---
 
-You are performing a code review. Your job is to catch real problems — not rewrite the author's decisions.
+You are performing a code review. Your job is to catch real problems, not to question the author's decisions.
 
 ## Current changes
 
@@ -31,7 +31,7 @@ Specifically look for:
 - Parts of the codebase that previously worked correctly but are now broken, outdated, or inconsistent because of this change (e.g. callers that weren't updated, documentation that's now wrong, tests that no longer reflect reality, types that are now mismatched)
 - Security issues or data integrity risks introduced by the changes
 - Missing things that the change clearly requires but forgot to include (e.g. an index for a new DB query, an env variable referenced but not documented, a new dependency not added to the manifest)
-- Consistency violations *with the rest of the codebase* — if this file uses a different pattern than every other file, flag it only if it creates real inconsistency (naming conventions, error handling style, etc.)
+- Consistency violations *with the rest of the codebase* — if a file uses a different pattern than every other file, flag it only if it creates real inconsistency (naming conventions, error handling style, etc.)
 
 **Step 3 — Classify each finding.**
 Use exactly these labels:
@@ -70,3 +70,4 @@ Then list findings grouped by file. For each finding:
 End with a one-line overall assessment: how confident are you this change is safe to merge as-is?
 
 ---
+
