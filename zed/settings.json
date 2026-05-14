@@ -16,9 +16,14 @@
   "remove_trailing_whitespace_on_save": false,
   "autosave": { "after_delay": { "milliseconds": 1000 } },
   "resize_all_panels_in_dock": [], // [] means every panel has its own size
-  "project_panel": { "hide_root": true },
-  "search": { "center_on_match": true },
+  "project_panel": { "dock": "left", "hide_root": true },
+  "git_panel": { "dock": "left" },
+  "outline_panel": { "button": false },
+  "collaboration_panel": { "button": false },
+  "search": { "center_on_match": true, "button": false },
   "search_wrap": false,
+  "debugger": { "button": false },
+  "gutter": { "bookmarks": false, "breakpoints": false },
   "tabs": { "file_icons": true },
   "tab_bar": {
     "show_pinned_tabs_in_separate_row": true,
@@ -54,7 +59,7 @@
     "zedokai": true,
   },
 
-  "disable_ai": false,
+  "disable_ai": true,
   "show_edit_predictions": false,
 
   "context_servers": {
@@ -99,7 +104,7 @@
           "provider": "opencode",
           "model": "go/deepseek-v4-pro",
           "enable_thinking": true,
-          "effort": "max"
+          "effort": "max",
         },
         "tools": {
           "open": false,
@@ -120,7 +125,7 @@
           "provider": "opencode",
           "model": "go/deepseek-v4-flash",
           "enable_thinking": true,
-          "effort": "max"
+          "effort": "max",
         },
         "tools": {
           "open": false,
