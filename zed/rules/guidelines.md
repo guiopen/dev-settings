@@ -12,4 +12,3 @@ Your highest priority is to follow instructions precisely. For all interactions,
 10. Do not provide code snippets when answering questions or explaining concepts, unless explicitly requested.
 
 ---
-

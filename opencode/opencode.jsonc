@@ -1,27 +1,28 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "plan",
-  "model": "opencode-go/deepseek-v4-flash",
+  "model": "opencode-go/deepseek-v4-pro",
   "small_model": "opencode-go/deepseek-v4-flash",
   "plugin": ["@mohak34/opencode-notifier@latest"],
   "permission": {
     "*": "ask",
     "read": {
       "*": "allow",
-      ".env": "deny"
+      ".env": "deny",
     },
     "grep": "allow",
     "glob": "allow",
     "task": "allow",
+    "question": "allow",
+    "todowrite": "allow",
+    "sleep": "allow",
+    "webfetch": "allow",
+    "duckduckgo_search": "allow",
+    "duckduckgo_fetch_content": "deny", // use webfetch instead
     "skill": "deny",
-    "question": "deny",
-    "todowrite": "deny",
     "doom_loop": "deny",
     "codesearch": "deny",
     "websearch": "deny",
-    "webfetch": "deny",
-    "duckduckgo*": "deny",
-    "sleep": "deny",
     "bash": {
       // Replaced by tools
       "ls *": "deny",
@@ -45,21 +46,21 @@
       "git diff *": "allow",
       "git status *": "allow",
       "git log *": "allow",
-      "git show *": "allow"
-    }
+      "git show *": "allow",
+    },
   },
   "agent": {
     "plan": {
       "color": "info",
       "permission": {
-        "edit": "deny"
-      }
+        "edit": "deny",
+      },
     },
     "build": {
       "color": "warning",
       "permission": {
-        "edit": "allow"
-      }
+        "edit": "allow",
+      },
     },
     "explore": {
       "model": "opencode-go/deepseek-v4-flash",
@@ -68,22 +69,22 @@
         "*": "deny",
         "read": "allow",
         "grep": "allow",
-        "glob": "allow"
-      }
+        "glob": "allow",
+      },
     },
     "general": {
-      "disable": true
+      "disable": true,
     },
     "compaction": {
       "model": "opencode-go/deepseek-v4-flash",
-      "variant": "max"
+      "variant": "max",
     },
     "title": {
-      "model": "opencode-go/deepseek-v4-flash"
+      "model": "opencode-go/deepseek-v4-flash",
     },
     "summary": {
-      "model": "opencode-go/deepseek-v4-flash"
-    }
+      "model": "opencode-go/deepseek-v4-flash",
+    },
   },
   "mcp": {
     "duckduckgo": {
@@ -91,26 +92,26 @@
       "command": ["uvx", "duckduckgo-mcp-server"],
       "environment": {
         "DDG_SAFE_SEARCH": "OFF",
-        "DDG_REGION": "wt-wt"
-      }
-    }
+        "DDG_REGION": "wt-wt",
+      },
+    },
   },
   "provider": {
     "llama.cpp": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "llama-server",
       "options": {
-        "baseURL": "http://127.0.0.1:8080/v1"
+        "baseURL": "http://127.0.0.1:8080/v1",
       },
       "models": {
         "local-model": {
           "name": "Local Model",
           "limit": {
             "context": 128000,
-            "output": 32000
-          }
-        }
-      }
-    }
-  }
+            "output": 32000,
+          },
+        },
+      },
+    },
+  },
 }

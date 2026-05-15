@@ -9,4 +9,3 @@ Follow these rules when researching:
 7. Always include the source URL alongside each finding so the user can verify.
 
 ---
-
