@@ -16,10 +16,10 @@
   "remove_trailing_whitespace_on_save": false,
   "autosave": { "after_delay": { "milliseconds": 1000 } },
   "resize_all_panels_in_dock": [], // [] means every panel has its own size
-  "project_panel": { "dock": "left", "hide_root": true },
-  "git_panel": { "dock": "left" },
+  "project_panel": { "hide_root": true },
   "outline_panel": { "button": false },
   "collaboration_panel": { "button": false },
+  "terminal": { "dock": "right" },
   "search": { "center_on_match": true, "button": false },
   "search_wrap": false,
   "debugger": { "button": false },
