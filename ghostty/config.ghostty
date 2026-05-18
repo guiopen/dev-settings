@@ -5,4 +5,4 @@ window-theme = ghostty
 tab-inherit-working-directory = true 
 window-save-state = always
 
-mouse-scroll-multiplier = 1
+mouse-scroll-multiplier = precision:0.2,discrete:1
