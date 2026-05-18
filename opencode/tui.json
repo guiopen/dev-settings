@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/tui.json",
   "theme": "openkai-spectrum",
+  "scroll_speed": 4,
   "keybinds": { "terminal_suspend": "none" }
 }
