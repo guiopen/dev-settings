@@ -63,6 +63,12 @@
         "edit": "allow",
       },
     },
+    "minimal": {
+      "color": "secondary",
+      "permission": {
+        "*": "deny",
+      },
+    },
     "explore": {
       "model": "opencode-go/deepseek-v4-flash",
       "variant": "max",
