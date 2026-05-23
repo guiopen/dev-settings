@@ -65,6 +65,7 @@
     },
     "minimal": {
       "color": "secondary",
+      "mode": "primary",
       "permission": {
         "*": "deny",
       },
