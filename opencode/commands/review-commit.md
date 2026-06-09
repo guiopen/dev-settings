@@ -16,7 +16,7 @@ You are performing a code review. Your job is to catch real problems, not to que
 
 ### Recent commit history (for context)
 
-!`git log --oneline -20`
+!`git --no-pager log --oneline -20`
 
 ---
 
