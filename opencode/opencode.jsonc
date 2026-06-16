@@ -14,16 +14,16 @@
     "grep": "allow",
     "glob": "allow",
     "task": "allow",
-    "sleep": "allow",
-    "webfetch": "allow",
-    "duckduckgo_search": "allow",
-    "duckduckgo_fetch_content": "deny", // use webfetch instead
+    "question": "allow",
     "skill": "deny",
-    "question": "deny",
     "todowrite": "deny",
     "doom_loop": "deny",
     "codesearch": "deny",
     "websearch": "deny",
+    "webfetch": "deny",
+    "duckduckgo_search": "deny",
+    "duckduckgo_fetch_content": "deny",
+    "sleep": "deny",
     "bash": {
       // Replaced by tools
       "ls *": "deny",
