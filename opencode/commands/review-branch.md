@@ -1,5 +1,6 @@
 ---
 description: Thorough code review of the current branch (dont work for pure local branches)
+subtask: true
 ---
 
 You are performing a code review. Your job is to catch real problems, not to question the author's decisions.
