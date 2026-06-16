@@ -1,6 +1,5 @@
 ---
 description: Thorough code review of all current changes
-subtask: true
 ---
 
 You are performing a code review. Your job is to catch real problems, not to question the author's decisions.
