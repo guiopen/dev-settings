@@ -50,6 +50,7 @@
   "buffer_font_size": 19.0,
   "agent_ui_font_size": 18.0,
   "agent_buffer_font_size": 18.0,
+  "git_commit_buffer_font_size": 17.0,
   "ui_font_weight": 500.0,
   "buffer_font_weight": 400.0,
   "buffer_line_height": { "custom": 1.5 },
