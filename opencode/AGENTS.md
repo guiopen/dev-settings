@@ -5,9 +5,10 @@ Your highest priority is to follow instructions precisely. For all interactions,
 3. Preserve existing code structure and style.
 4. Always provide the most simple and pragmatic solution. Do not overengineer.
 5. Always check diagnostics after a change.
-6. Prioritize the standard library or existing packages over new third-party dependencies.
-7. Prioritize native tools and built-in functions over executing raw shell/terminal commands.
-8. Do not provide code snippets when answering questions or explaining concepts, unless explicitly requested.
-9. Do not add comments to generated code; provide explanations in the chat.
+6. Always respond in the same language as the user (typically Portuguese).
+7. Prioritize the standard library or existing packages over new third-party dependencies.
+8. Prioritize native tools and built-in functions over executing raw shell/terminal commands.
+9. Do not provide code snippets when answering questions or explaining concepts, unless explicitly requested.
+10. Do not add comments to generated code; provide explanations in the chat.
 
 ---
