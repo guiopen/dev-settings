@@ -4,7 +4,7 @@
   "model": "opencode-go/deepseek-v4-pro",
   "small_model": "opencode-go/deepseek-v4-flash",
   "lsp": true,
-  "plugin": ["@mohak34/opencode-notifier@latest", "@dietrichgebert/ponytail"],
+  "plugin": ["@mohak34/opencode-notifier@latest"],
   "permission": {
     "*": "ask",
     "read": {
@@ -14,10 +14,10 @@
     "grep": "allow",
     "glob": "allow",
     "task": "allow",
-    "skill": "allow",
-    "question": "allow",
     "webfetch": "allow",
+    "question": "deny",
     "todowrite": "deny",
+    "skill": "deny",
     "doom_loop": "deny",
     "codesearch": "deny",
     "websearch": "deny",
