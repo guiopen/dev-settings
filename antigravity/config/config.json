@@ -4,7 +4,7 @@
     "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_PROCEED_IN_SANDBOX",
     "customThemeSeedsDark": {
       "background": "#222222",
-      "foregroundOverride": "#F8F8F2",
+      "foregroundOverride": "#FFFFFF",
       "primary": "#F92672"
     },
     "enableTerminalSandbox": true,
