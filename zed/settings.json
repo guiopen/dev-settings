@@ -19,6 +19,7 @@
   "project_panel": { "hide_root": true },
   "outline_panel": { "button": false },
   "collaboration_panel": { "button": false },
+  "git_panel": { "group_by": "staging" },
   "terminal": { "dock": "bottom" },
   "search": { "center_on_match": true, "button": false },
   "search_wrap": false,
@@ -62,120 +63,4 @@
 
   "disable_ai": true,
   "show_edit_predictions": false,
-
-  "context_servers": {
-    "duckduckgo": {
-      "enabled": true,
-      "remote": false,
-      "command": "uvx",
-      "args": ["duckduckgo-mcp-server"],
-      "env": {
-        "DDG_SAFE_SEARCH": "OFF",
-        "DDG_REGION": "wt-wt",
-      },
-    },
-  },
-
-  "language_models": {
-    "opencode": {
-      "show_free_models": false,
-      "show_zen_models": false,
-    },
-  },
-
-  "agent": {
-    "flexible": false,
-    "expand_terminal_card": false,
-    "model_parameters": [{ "temperature": 0.0 }],
-    "tool_permissions": {
-      "tools": {
-        "fetch": {
-          "default": "allow",
-        },
-        "mcp:duckduckgo:search": {
-          "default": "allow",
-        },
-      },
-    },
-    "default_profile": "ask",
-    "profiles": {
-      "ask": {
-        "name": "Ask",
-        "default_model": {
-          "provider": "opencode",
-          "model": "go/deepseek-v4-pro",
-          "enable_thinking": true,
-          "effort": "max",
-        },
-        "tools": {
-          "open": false,
-          "terminal": true,
-        },
-        "enable_all_context_servers": true,
-        "context_servers": {
-          "duckduckgo": {
-            "tools": {
-              "fetch_content": false,
-            },
-          },
-        },
-      },
-      "write": {
-        "name": "Write",
-        "default_model": {
-          "provider": "opencode",
-          "model": "go/deepseek-v4-flash",
-          "enable_thinking": true,
-          "effort": "max",
-        },
-        "tools": {
-          "open": false,
-          "restore_file_from_disk": false,
-        },
-        "enable_all_context_servers": true,
-        "context_servers": {
-          "duckduckgo": {
-            "tools": {
-              "fetch_content": false,
-            },
-          },
-        },
-      },
-    },
-    "default_model": {
-      "provider": "opencode",
-      "model": "go/deepseek-v4-flash",
-      "enable_thinking": true,
-      "effort": "max",
-    },
-    "inline_assistant_model": {
-      "provider": "opencode",
-      "model": "go/deepseek-v4-flash",
-      "enable_thinking": false,
-    },
-    "commit_message_model": {
-      "provider": "opencode",
-      "model": "go/deepseek-v4-flash",
-      "enable_thinking": false,
-    },
-    "thread_summary_model": {
-      "provider": "opencode",
-      "model": "go/qwen3.5-plus",
-      "enable_thinking": false,
-    },
-    "favorite_models": [
-      {
-        "provider": "opencode",
-        "model": "go/deepseek-v4-flash",
-        "enable_thinking": true,
-        "effort": "max",
-      },
-      {
-        "provider": "opencode",
-        "model": "go/deepseek-v4-pro",
-        "enable_thinking": true,
-        "effort": "max",
-      },
-    ],
-  },
 }
