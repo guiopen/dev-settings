@@ -1,7 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "dev",
-  "model": "opencode-go/deepseek-flash",
+  "model": "deepseek-v4.1-flash",
   "lsp": false,
   "plugin": ["@mohak34/opencode-notifier@latest"],
   "permission": {
@@ -51,12 +51,12 @@
     "dev": {
       "mode": "primary",
       "color": "secondary",
-      "model": "opencode-go/deepseek-flash",
+      "model": "deepseek-v4.1-flash",
       "variant": "max",
     },
     "explore": {
-      "model": "opencode-go/deepseek-flash",
-      "variant": "high",
+      "model": "deepseek-v4.1-flash",
+      "variant": "max",
       "permission": {
         "*": "deny",
         "read": "allow",
@@ -65,7 +65,7 @@
       },
     },
     "compaction": {
-      "model": "opencode-go/deepseek-flash",
+      "model": "deepseek-v4.1-flash",
       "variant": "max",
     },
   },
