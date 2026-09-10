@@ -3,7 +3,7 @@ description: >-
   Agent specialized for deep, multi-step research of information online. Useful when you need to look up obscure documentation or hard-to-use APIs, check how a library or tool is used, find similar bug reports and error messages to understand a root cause, search for solutions after a problem is identified, explore best practices, compare approaches, or synthesize information across multiple sources.
 mode: subagent
 model: opencode-go/deepseek-flash
-variant: high
+variant: max
 permission:
   "*": "deny"
   "duckduckgo_search": "allow"
