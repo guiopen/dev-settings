@@ -2,13 +2,19 @@
 description: >-
   Agent specialized for deep, multi-step research of information online. Useful when you need to look up obscure documentation or hard-to-use APIs, check how a library or tool is used, find similar bug reports and error messages to understand a root cause, search for solutions after a problem is identified, explore best practices, compare approaches, or synthesize information across multiple sources.
 mode: subagent
-model: opencode-go/deepseek-v4.1-flash
-variant: max
-permission:
-  "*": "deny"
-  "duckduckgo_search": "allow"
-  "webfetch": "allow"
-  "sleep": "allow"
+model: opencode-go/deepseek-v4.1-flash#max
+permissions:
+  - { action: "read", resource: "*", effect: "deny" }
+  - { action: "edit", resource: "*", effect: "deny" }
+  - { action: "glob", resource: "*", effect: "deny" }
+  - { action: "grep", resource: "*", effect: "deny" }
+  - { action: "shell", resource: "*", effect: "deny" }
+  - { action: "subagent", resource: "*", effect: "deny" }
+  - { action: "skill", resource: "*", effect: "deny" }
+  - { action: "duckduckgo_search", resource: "*", effect: "allow" }
+  - { action: "duckduckgo_expand_link", resource: "*", effect: "allow" }
+  - { action: "webfetch", resource: "*", effect: "allow" }
+  - { action: "sleep", resource: "*", effect: "allow" }
 ---
 
 You are a web research specialist. You excel at thoroughly finding and synthesizing information from the internet.
