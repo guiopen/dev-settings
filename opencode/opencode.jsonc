@@ -3,6 +3,7 @@
   "model": "opencode-go/deepseek-v4.1-flash",
   //"plugins": ["@mohak34/opencode-notifier@latest"],
   "permissions": [
+    { "action": "shell", "resource": "*", "effect": "deny" },
     { "action": "read", "resource": "*.env", "effect": "deny" },
     { "action": "read", "resource": "*.env.*", "effect": "deny" },
     { "action": "skill", "resource": "opencode", "effect": "deny" },
