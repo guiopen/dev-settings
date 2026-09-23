@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "openkai-spectrum"
+  },
+  "scroll": {
+    "speed": 4
+  },
+  "keybinds": {
+    "terminal.suspend": "none"
+  }
+}

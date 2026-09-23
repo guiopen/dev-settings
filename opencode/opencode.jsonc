@@ -1,0 +1,61 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode-go/deepseek-v4.1-flash",
+  //"plugins": ["@mohak34/opencode-notifier@latest"],
+  "permissions": [
+    { "action": "read", "resource": "*.env", "effect": "deny" },
+    { "action": "read", "resource": "*.env.*", "effect": "deny" },
+    { "action": "skill", "resource": "opencode", "effect": "deny" },
+    { "action": "skill", "resource": "report", "effect": "deny" },
+    { "action": "subagent", "resource": "*", "effect": "deny" },
+    { "action": "question", "resource": "*", "effect": "deny" },
+    { "action": "websearch", "resource": "*", "effect": "deny" },
+    { "action": "browser", "resource": "*", "effect": "deny" },
+    { "action": "execute", "resource": "opencode*", "effect": "deny" },
+    { "action": "sleep", "resource": "*", "effect": "deny" },
+    { "action": "duckduckgo_fetch_content", "resource": "*", "effect": "deny" },
+  ],
+  "default_agent": "dev",
+  "agents": {
+    "dev": {
+      "mode": "primary",
+      "color": "#8b888f",
+      "model": "opencode-go/deepseek-v4.1-flash#max",
+    },
+    "plan": { "disabled": true },
+    "build": { "disabled": true },
+    "general": { "disabled": true },
+    "explore": { "disabled": true },
+    "compaction": { "model": "opencode-go/deepseek-v4.1-flash#max" },
+  },
+  "mcp": {
+    "servers": {
+      "duckduckgo": {
+        "type": "local",
+        "command": ["uvx", "duckduckgo-mcp-server"],
+        "environment": {
+          "DDG_SAFE_SEARCH": "OFF",
+          "DDG_REGION": "wt-wt",
+        },
+      },
+    },
+  },
+  "providers": {
+    "llama.cpp": {
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "name": "llama-server (local)",
+      "settings": {
+        "baseURL": "http://127.0.0.1:8080/v1",
+      },
+      "models": {
+        "local-model": {
+          "name": "Local Model",
+          "limit": {
+            "context": 128000,
+            "output": 32000,
+          },
+        },
+      },
+    },
+  },
+}
