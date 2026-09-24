@@ -16,15 +16,16 @@
     { "action": "sleep", "resource": "*", "effect": "deny" },
     { "action": "duckduckgo_fetch_content", "resource": "*", "effect": "deny" },
   ],
-  "default_agent": "dev",
+  "default_agent": "plan",
   "agents": {
-    "dev": {
-      "mode": "primary",
-      "color": "#8b888f",
+    "plan": {
+      "color": "#fce566",
       "model": "opencode-go/deepseek-v4.1-flash#max",
     },
-    "plan": { "disabled": true },
-    "build": { "disabled": true },
+    "build": {
+      "color": "#fd9353",
+      "model": "opencode-go/deepseek-v4.1-flash#max",
+    },
     "general": { "disabled": true },
     "explore": { "disabled": true },
     "compaction": { "model": "opencode-go/deepseek-v4.1-flash#max" },
