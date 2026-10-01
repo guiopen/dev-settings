@@ -8,6 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "base_keymap": "VSCode",
+  "soft_wrap": "editor_width",
   "file_scan_inclusions": ["node_modules/"],
   "sticky_scroll": { "enabled": true },
   "use_on_type_format": false,
