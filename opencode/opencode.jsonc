@@ -21,15 +21,15 @@
   "agents": {
     "plan": {
       "color": "#fce566",
-      "model": "opencode-go/deepseek-v4.1-flash#max",
+      "model": "opencode-go/deepseek-v4.1-flash#high",
     },
     "build": {
       "color": "#fd9353",
-      "model": "opencode-go/deepseek-v4.1-flash#max",
+      "model": "opencode-go/deepseek-v4.1-flash#high",
     },
     "general": { "disabled": true },
     "explore": { "disabled": true },
-    "compaction": { "model": "opencode-go/deepseek-v4.1-flash#max" },
+    "compaction": { "model": "opencode-go/deepseek-v4.1-flash#high" },
   },
   "mcp": {
     "servers": {
