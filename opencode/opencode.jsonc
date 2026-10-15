@@ -1,7 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode-go/deepseek-v4.1-flash",
-  "plugins": ["@mohak34/opencode-notifier@latest"],
   "permissions": [
     { "action": "shell", "resource": "*", "effect": "deny" },
     { "action": "external_directory", "resource": "*", "effect": "deny" },
@@ -21,15 +20,15 @@
   "agents": {
     "plan": {
       "color": "#fce566",
-      "model": "opencode-go/deepseek-v4.1-flash#high",
+      "model": "opencode-go/deepseek-v4.1-flash#max",
     },
     "build": {
       "color": "#fd9353",
-      "model": "opencode-go/deepseek-v4.1-flash#high",
+      "model": "opencode-go/deepseek-v4.1-flash#max",
     },
     "general": { "disabled": true },
     "explore": { "disabled": true },
-    "compaction": { "model": "opencode-go/deepseek-v4.1-flash#high" },
+    "compaction": { "model": "opencode-go/deepseek-v4.1-flash#max" },
   },
   "mcp": {
     "servers": {
